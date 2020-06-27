@@ -8,14 +8,18 @@ export default class Elementos extends React.Component{
     };
 
     componentDidMount() {
-        this.showElements();
+        const interval = setInterval(() => {
+            this.showElements();
+            console.log('Corrio esta mamada');
+        }, 1000);
+        
     }
 
     showElements(){
         axios.get('http://localhost:8080/elements/')
-            .then(response => {
-                console.log(response);
-                this.setState({elementos: response.data});
+            .then(response => response.data)
+            .then(data => {
+                this.setState({elementos: data});
             });
     }
 
@@ -27,17 +31,10 @@ export default class Elementos extends React.Component{
                         <h1>BINGO</h1>
                     </div>
                 </div>
-                <div id="elementBar">
-                    <div>
+                <div id="elementSection">
+                    <div class='form-group'>
                         <section>
-                            <p><label id="Elements">New Element:</label>{this.state.elementos.map(Elements => <input key={Elements.id} type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
-                        </section>
-                    </div>
-                    <div>
-                        <section>
-                            <ul>
-                                <li>{this.state.elementos.length}</li>
-                            </ul>
+                            <p><label id="Elements">New Element:</label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
                         </section>
                     </div>
                 </div>

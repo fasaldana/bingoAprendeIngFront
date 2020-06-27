@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Inicio from "./inicio";
 
 class Categorias extends Component {
     render(){
@@ -14,10 +13,10 @@ class Categorias extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
         <li className="nav-item active">
-        <a className="nav-link" href="index.html">HOME<span className="sr-only">(current)</span></a>
+        <a className="nav-link" href="#">HOME<span className="sr-only">(current)</span></a>
         </li>
         <li className="nav-item">
-        <a className="nav-link" href="ayuda.html">HELP!</a>
+        <a className="nav-link" href="#">HELP!</a>
         </li>
         </ul>
         </div>
@@ -31,14 +30,9 @@ class Categorias extends Component {
 
         <div className="d-flex flex-nowrap">
 
-        <div className="col px-md-5 p-2 "><img src="img/family_96px.png" className="rounded float-left"
+        <div className="col px-md-5 p-2"><img src="" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
-        className="btn btn-warning stretched-link">FAMILY</a></div>
-        </div>
-        <div className="col px-md-5 p-2"><img src="img/numbers_96px.png" className="rounded float-left"
-        alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
+        <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">NUMBERS</a></div>
         </div>
 
@@ -47,12 +41,12 @@ class Categorias extends Component {
         <div className="d-flex flex-nowrap">
         <div className="col px-md-5 p-2"><img src="img/valet_parking_96px.png" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
+        <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">VEHICLES</a>
         </div></div>
         <div className="col px-md-5 p-2"><img src="img/flounder_fish_96px.png" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
+        <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">ANIMALS</a></div>
         </div>
 
@@ -61,11 +55,11 @@ class Categorias extends Component {
         <div className="d-flex flex-nowrap">
         <div className="col px-md-5 p-3"><img src="img/business_96px.png" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
+        <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">BUSINESS</a>
         </div></div>
         <div className="col px-md-5 p-3"><img src="img/shirt_96px.png" className="rounded float-left" alt="10"></img>
-        <div className="p-5 border bg-light"><a href="tipo.html"
+        <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">CLOTHES</a></div>
         </div>
 

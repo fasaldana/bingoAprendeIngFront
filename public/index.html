@@ -17,10 +17,32 @@
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
     />
+    <script type="text/javascript" src="../src/component/bingoPlay.js"></script>
     <title>Bingo</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCpxzaICOoMFiPFhvVwoIODTMfhALB_GXE",
+        authDomain: "bingolearnenglish.firebaseapp.com",
+        databaseURL: "https://bingolearnenglish.firebaseio.com",
+        projectId: "bingolearnenglish",
+        storageBucket: "bingolearnenglish.appspot.com",
+        messagingSenderId: "354089166858",
+        appId: "1:354089166858:web:9aedc8f011db81db4b57f3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

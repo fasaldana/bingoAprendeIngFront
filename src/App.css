@@ -103,3 +103,7 @@ th, td {
 #Elements{
   padding: 10px;
 }
+
+#elementBar{
+  text-align: center;
+}

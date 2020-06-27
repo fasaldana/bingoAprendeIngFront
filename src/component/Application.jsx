@@ -1,6 +1,27 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Application extends Component {
+    
+    state = {
+        content : [],
+    };
+
+    componentDidMount() {
+        this.showElements();
+    }
+
+    showElements(){
+        axios.get('http://localhost:8080/content/')
+            .then(response => response.data)
+            .then(data => {
+                this.setState({content: data});
+            });
+    }
+
+    start(){
+        axios.get('http://localhost:8080/elements/start');
+    }no
 
     render() {
         return (
@@ -44,6 +65,9 @@ class Application extends Component {
                 </table>
                <div id="btn">
                    <input type="submit" value="BINGO" className="btn btn-primary btn-block"></input>
+               </div>
+               <div id="btn">
+                   <input type="submit" value="Start Game" className="btn btn-primary btn-block" onClick={this.start}></input>
                </div>
            </div>
 
