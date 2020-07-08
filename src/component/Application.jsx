@@ -1,11 +1,45 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import storage from './Firebase/firebase'
 
 class Application extends Component {
     
-    state = {
-        content : [],
-    };
+    constructor(){
+        super();
+        this.state = {
+            content : [],
+            Animals1: '',
+            Animals2: '',
+            Animals3: '',
+            Animals4: '',
+            Animals5: '',
+            Animals6: '',
+            Animals7: '',
+            Animals8: '',
+            Animals9: '',
+            Animals10: '',
+        };
+        this.getImage('Animals1');
+        this.getImage('Animals2');
+        this.getImage('Animals3');
+        this.getImage('Animals4');
+        this.getImage('Animals5');
+        this.getImage('Animals6');
+        this.getImage('Animals7');
+        this.getImage('Animals8');
+        this.getImage('Animals9');
+        this.getImage('Animals10');
+    }
+
+    getImage (image) {    
+        let { state } = this
+        storage.child(`${image}.jpg`).getDownloadURL().then((url) => {
+          state[image] = url
+          this.setState(state)
+        }).catch((error) => {
+          // Handle any errors
+        })
+    }
 
     componentDidMount() {
         this.showElements();
@@ -28,39 +62,39 @@ class Application extends Component {
            <div id="content">
                 <table id="bingotable">
                     <tr>
-                        <td id="square0"> &nbsp;</td>
-                        <td id="square1"> &nbsp;</td>
-                        <td id="square2"> &nbsp;</td>
-                        <td id="square3"> &nbsp;</td>
-                        <td id="square4"> &nbsp;</td>
+                        <td id="square0"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square1"><img src={this.state.Animals2} width="100%"/></td>
+                        <td id="square2"><img src={this.state.Animals6} width="100%"/></td>
+                        <td id="square3"><img src={this.state.Animals4} width="100%"/></td>
+                        <td id="square4"><img src={this.state.Animals5} width="100%"/></td>
                     </tr>
                     <tr>
-                        <td id="square5"> &nbsp;</td>
-                        <td id="square6"> &nbsp;</td>
-                        <td id="square7"> &nbsp;</td>
-                        <td id="square8"> &nbsp;</td>
-                        <td id="square9"> &nbsp;</td>
+                        <td id="square5"><img src={this.state.Animals2} width="100%"/></td>
+                        <td id="square6"><img src={this.state.Animals10} width="100%"/></td>
+                        <td id="square7"><img src={this.state.Animals8} width="100%"/></td>
+                        <td id="square8"><img src={this.state.Animals10} width="100%"/></td>
+                        <td id="square9"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
                     <tr>
-                        <td id="square10"> &nbsp;</td>
-                        <td id="square11"> &nbsp;</td>
+                        <td id="square10"><img src={this.state.Animals9} width="100%"/></td>
+                        <td id="square11"><img src={this.state.Animals8} width="100%"/></td>
                         <td id="squarefree"> FREE</td>
-                        <td id="square12"> &nbsp;</td>
-                        <td id="square13"> &nbsp;</td>
+                        <td id="square12"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square13"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
                     <tr>
-                        <td id="square14"> &nbsp;</td>
-                        <td id="square15"> &nbsp;</td>
-                        <td id="square16"> &nbsp;</td>
-                        <td id="square17"> &nbsp;</td>
-                        <td id="square18"> &nbsp;</td>
+                        <td id="square14"><img src={this.state.Animals5} width="100%"/></td>
+                        <td id="square15"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square16"><img src={this.state.Animals5} width="100%"/></td>
+                        <td id="square17"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square18"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
                     <tr>
-                        <td id="square19"> &nbsp;</td>
-                        <td id="square20"> &nbsp;</td>
-                        <td id="square21"> &nbsp;</td>
-                        <td id="square22"> &nbsp;</td>
-                        <td id="square23"> &nbsp;</td>
+                        <td id="square19"><img src={this.state.Animals4} width="100%"/></td>
+                        <td id="square20"><img src={this.state.Animals5} width="100%"/></td>
+                        <td id="square21"><img src={this.state.Animals4} width="100%"/></td>
+                        <td id="square22"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square23"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
                 </table>
                <div id="btn">

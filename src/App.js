@@ -4,6 +4,7 @@ import Categorias from './component/categorias';
 import Application from "./component/Application";
 import Elementos from "./component/Elementos";
 import {Switch, Route} from "react-router-dom";
+import ImageLoad from "./component/ImageLoad";
 
 function App() {
     return (

@@ -34,7 +34,7 @@ export default class Elementos extends React.Component{
                 <div id="elementSection">
                     <div class='form-group'>
                         <section>
-                            <p><label id="Elements">New Element:</label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
+                            <p><label id="Elements">Elements list:</label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
                         </section>
                     </div>
                 </div>

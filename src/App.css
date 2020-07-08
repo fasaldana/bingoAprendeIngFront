@@ -80,8 +80,8 @@ th, td {
   text-align: center;
   border: 3px solid black;
   width: 20%;
+  height: 20%;
 }
-
 .orange {
   background: #9b59b6;
 }
