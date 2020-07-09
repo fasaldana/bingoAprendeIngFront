@@ -14,6 +14,9 @@ import ElementosGenerados from './component/ElementosGenerados';
 function App() {
     return (
         <Router>
+            
+
+
             <div className="App">
                 <Route path="/" exact component={Home}/>
                 <Route path="/tipo" component={Tipo}/>

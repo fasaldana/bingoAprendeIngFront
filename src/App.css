@@ -1,14 +1,14 @@
 @import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
-
+/*
 body {
-  background: #36b9cc;
+  background-image: url("/public/assets/fondo1.jpg");
   display: flex;
   height: 100vh;
   align-content: center;
   justify-content: center;
   align-items: center;
 }     
-
+*/
 
 h1, p {
   font-family: 'Roboto', sans-serif; font-size: 20pt;
@@ -39,8 +39,8 @@ p a {
 #bingotable {
   margin: 0 auto;
   text-align: center;
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 700px;
   border-collapse: collapse;
   background: white;
 }
@@ -94,14 +94,23 @@ th, td {
   padding: 15px 32px;
   background-color: #6648b1;
   border: 1px solid #563d7c;
+  width: 20px;
+  height: 50px;
 }
 .btn-primary:hover{
-  background-color: #563d7c;
+  background-color: #7c3d3d;
   border: 1px solid #563d7c;
+  width: 20px;
+  height: 50px;
 }
 
 #Elements{
   padding: 10px;
+}
+#logo{
+  
+  display: flex;
+  justify-content: center;
 }
 
 #elementBar{

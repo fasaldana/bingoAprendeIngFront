@@ -89,7 +89,10 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content" className='m-3'>
+           <div id="content" className="d-flex flex-column">
+               
+               
+
                 <table id="bingotable">
                     <tr>
                         <td id="square0"><img src={this.state.Jobs1} width="100%"/></td>
@@ -108,7 +111,9 @@ class Application extends Component {
                     <tr>
                         <td id="square10"><img src={this.state.Animals9} width="100%"/></td>
                         <td id="square11"><img src={this.state.Animals8} width="100%"/></td>
-                        <td id="squarefree"> FREE</td>
+                        <td id="squarefree"> <div id="btn">
+                   <input type="submit" value="BINGO" className="btn btn-primary w-auto h-auto"></input>
+               </div></td>
                         <td id="square12"><img src={this.state.Animals1} width="100%"/></td>
                         <td id="square13"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
@@ -127,13 +132,12 @@ class Application extends Component {
                         <td id="square23"><img src={this.state.Animals1} width="100%"/></td>
                     </tr>
                 </table>
-               <div id="btn">
-                   <input type="submit" value="BINGO" className="btn btn-primary btn-block m-3"></input>
-               </div>
-               <div id="btn">
+                <div id="btn">
                    <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
                </div>
+               
            </div>
+           
 
         )
     }

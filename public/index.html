@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link
@@ -43,8 +44,28 @@
     </script>
     <title>Bingo</title>
   </head>
-  <body>
+  <body background="assets/fondo1.jpg">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="assets/logoON.png" width="160" height="40">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div id="root" class="container"></div>
+
+   
   </body>
 </html>
