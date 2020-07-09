@@ -18,6 +18,16 @@ class Application extends Component {
             Animals8: '',
             Animals9: '',
             Animals10: '',
+            Jobs1: '',
+            Jobs2: '',
+            Jobs3: '',
+            Jobs4: '',
+            Jobs5: '',
+            Jobs6: '',
+            Jobs7: '',
+            Jobs8: '',
+            Jobs9: '',
+            Jobs10: '',
         };
         this.getImage('Animals1');
         this.getImage('Animals2');
@@ -29,6 +39,26 @@ class Application extends Component {
         this.getImage('Animals8');
         this.getImage('Animals9');
         this.getImage('Animals10');
+        this.getImage('Jobs1');
+        this.getImage('Jobs2');
+        this.getImage('Jobs3');
+        this.getImage('Jobs4');
+        this.getImage('Jobs5');
+        this.getImage('Jobs6');
+        this.getImage('Jobs7');
+        this.getImage('Jobs8');
+        this.getImage('Jobs9');
+        this.getImage('Jobs10');
+        this.getImage('Numbers1');
+        this.getImage('Numbers2');
+        this.getImage('Numbers3');
+        this.getImage('Numbers4');
+        this.getImage('Numbers5');
+        this.getImage('Numbers6');
+        this.getImage('Numbers7');
+        this.getImage('Numbers8');
+        this.getImage('Numbers9');
+        this.getImage('Numbers10');
     }
 
     getImage (image) {    
@@ -62,8 +92,8 @@ class Application extends Component {
            <div id="content" className='m-3'>
                 <table id="bingotable">
                     <tr>
-                        <td id="square0"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square1"><img src={this.state.Animals2} width="100%"/></td>
+                        <td id="square0"><img src={this.state.Jobs1} width="100%"/></td>
+                        <td id="square1"><img src={this.state.Numbers2} width="100%"/></td>
                         <td id="square2"><img src={this.state.Animals6} width="100%"/></td>
                         <td id="square3"><img src={this.state.Animals4} width="100%"/></td>
                         <td id="square4"><img src={this.state.Animals5} width="100%"/></td>

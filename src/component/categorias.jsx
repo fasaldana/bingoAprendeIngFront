@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Categorias extends Component {
     render(){
@@ -30,7 +31,7 @@ class Categorias extends Component {
 
         <div className="d-flex flex-nowrap">
 
-        <div className="col px-md-5 p-2"><img src="" className="rounded float-left"
+        <div className="col px-md-5 p-2"><img src="assets/numbers_96px.png" className="rounded float-left"
         alt="10"></img>
         <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">NUMBERS</a></div>
@@ -39,26 +40,27 @@ class Categorias extends Component {
         </div>
 
         <div className="d-flex flex-nowrap">
-        <div className="col px-md-5 p-2"><img src="img/valet_parking_96px.png" className="rounded float-left"
+        <div className="col px-md-5 p-2"><img src="assets/valet_parking_96px.png" className="rounded float-left"
         alt="10"></img>
         <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">VEHICLES</a>
         </div></div>
-        <div className="col px-md-5 p-2"><img src="img/flounder_fish_96px.png" className="rounded float-left"
+        <div className="col px-md-5 p-2"><img src="assets/elephant_200px.png" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="#"
-        className="btn btn-warning stretched-link">ANIMALS</a></div>
+        <div className="p-5 border bg-light"><Link to="/game"><a className="btn btn-warning stretched-link">ANIMALS</a></Link></div>
         </div>
 
         </div>
 
         <div className="d-flex flex-nowrap">
-        <div className="col px-md-5 p-3"><img src="img/business_96px.png" className="rounded float-left"
+        <div className="col px-md-5 p-3"><img src="assets/business_96px.png" className="rounded float-left"
         alt="10"></img>
-        <div className="p-5 border bg-light"><a href="#"
-        className="btn btn-warning stretched-link">BUSINESS</a>
+        <div className="p-5 border bg-light">
+            <Link to="/game">
+                <a className="btn btn-warning stretched-link">BUSINESS</a>
+            </Link>
         </div></div>
-        <div className="col px-md-5 p-3"><img src="img/shirt_96px.png" className="rounded float-left" alt="10"></img>
+        <div className="col px-md-5 p-3"><img src="assets/shirt_96px.png" className="rounded float-left" alt="10"></img>
         <div className="p-5 border bg-light"><a href="#"
         className="btn btn-warning stretched-link">CLOTHES</a></div>
         </div>

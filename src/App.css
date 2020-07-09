@@ -16,7 +16,6 @@ h1, p {
   margin: 0 auto;
   text-align: center;
   padding: 30px;
-  color: white;
 }
 
 p a {
@@ -45,6 +44,7 @@ p a {
   border-collapse: collapse;
   background: white;
 }
+
 
 #square1:hover,
 #square2:hover,
