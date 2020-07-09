@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import logoAPP from '../img/logoAPP.png';
+
 
 
 
@@ -32,7 +32,8 @@ export default class Elementos extends React.Component{
             <div>
                 <div id="header">
                     <div>
-                        <img src={logoAPP} width='500px'height='500px'/>
+                        <img src="assets/logoAPP.png" className="rounded float-left" width='250px'></img>
+                        
                     </div>
                 </div>
                 <div id="elementSection">
