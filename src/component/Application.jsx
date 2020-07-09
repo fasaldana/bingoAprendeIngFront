@@ -59,7 +59,7 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content">
+           <div id="content" className='m-3'>
                 <table id="bingotable">
                     <tr>
                         <td id="square0"><img src={this.state.Animals1} width="100%"/></td>
@@ -98,10 +98,10 @@ class Application extends Component {
                     </tr>
                 </table>
                <div id="btn">
-                   <input type="submit" value="BINGO" className="btn btn-primary btn-block"></input>
+                   <input type="submit" value="BINGO" className="btn btn-primary btn-block m-3"></input>
                </div>
                <div id="btn">
-                   <input type="submit" value="Start Game" className="btn btn-primary btn-block" onClick={this.start}></input>
+                   <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
                </div>
            </div>
 

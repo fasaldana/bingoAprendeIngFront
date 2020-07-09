@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import logoAPP from '../img/logoAPP.png';
 
 
 
@@ -13,7 +12,7 @@ export default class Elementos extends React.Component{
     componentDidMount() {
         const interval = setInterval(() => {
             this.showElements();
-            //console.log('');
+            console.log('Corrio esta mamada');
         }, 1000);
         
     }
@@ -30,15 +29,10 @@ export default class Elementos extends React.Component{
     render() {
         return (
             <div>
-                <div id="header">
-                    <div>
-                        <img src={logoAPP} width='500px'height='500px'/>
-                    </div>
-                </div>
                 <div id="elementSection">
                     <div class='form-group'>
                         <section>
-                            <p><label id="Elements">Word:</label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
+                            <p><label id="Elements">Elements list:</label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
                         </section>
                     </div>
                 </div>
