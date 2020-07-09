@@ -114,22 +114,22 @@ class Application extends Component {
                         <td id="squarefree"> <div id="btn">
                    <input type="submit" value="BINGO" className="btn btn-primary w-auto h-auto"></input>
                </div></td>
-                        <td id="square12"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square13"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square12"><img src={this.state.Animals15} width="100%"/></td>
+                        <td id="square13"><img src={this.state.Animals11} width="100%"/></td>
                     </tr>
                     <tr>
                         <td id="square14"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square15"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square15"><img src={this.state.Animals18} width="100%"/></td>
                         <td id="square16"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square17"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square18"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square17"><img src={this.state.Animals19} width="100%"/></td>
+                        <td id="square18"><img src={this.state.Animals20} width="100%"/></td>
                     </tr>
                     <tr>
                         <td id="square19"><img src={this.state.Animals4} width="100%"/></td>
                         <td id="square20"><img src={this.state.Animals5} width="100%"/></td>
                         <td id="square21"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square22"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square23"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square22"><img src={this.state.Animals21} width="100%"/></td>
+                        <td id="square23"><img src={this.state.Animals22} width="100%"/></td>
                     </tr>
                 </table>
                 <div id="btn">
