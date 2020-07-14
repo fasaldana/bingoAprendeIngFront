@@ -89,50 +89,47 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content" className="d-flex flex-column">
-               
-               
+           <div id="content" className="d-flex flex-column row">
 
                 <table id="bingotable">
                     <tr>
-                        <td id="square0"><img src={this.state.Jobs1} width="100%"/></td>
-                        <td id="square1"><img src={this.state.Numbers2} width="100%"/></td>
-                        <td id="square2"><img src={this.state.Animals6} width="100%"/></td>
-                        <td id="square3"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square4"><img src={this.state.Animals5} width="100%"/></td>
+                        <td id="square0"><img id="imagenes" src={this.state.Jobs1}/></td>
+                        <td id="square1"><img id="imagenes" src={this.state.Numbers2} /></td>
+                        <td id="square2"><img id="imagenes" src={this.state.Animals6} /></td>
+                        <td id="square3"><img id="imagenes" src={this.state.Animals4} /></td>
+                        <td id="square4"><img id="imagenes" src={this.state.Animals5}/></td>
                     </tr>
                     <tr>
-                        <td id="square5"><img src={this.state.Animals2} width="100%"/></td>
-                        <td id="square6"><img src={this.state.Animals10} width="100%"/></td>
-                        <td id="square7"><img src={this.state.Animals8} width="100%"/></td>
-                        <td id="square8"><img src={this.state.Animals10} width="100%"/></td>
-                        <td id="square9"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square5"><img id="imagenes" src={this.state.Animals2}/></td>
+                        <td id="square6"><img id="imagenes" src={this.state.Animals10}/></td>
+                        <td id="square7"><img id="imagenes" src={this.state.Animals8} /></td>
+                        <td id="square8"><img id="imagenes" src={this.state.Animals10}/></td>
+                        <td id="square9"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
                     <tr>
-                        <td id="square10"><img src={this.state.Animals9} width="100%"/></td>
-                        <td id="square11"><img src={this.state.Animals8} width="100%"/></td>
-                        <td id="squarefree"> <div id="btn">
-                   <input type="submit" value="BINGO" className="btn btn-primary w-auto h-auto"></input>
+                        <td id="square10"><img id="imagenes" src={this.state.Animals9}/></td>
+                        <td id="square11"><img id="imagenes" src={this.state.Animals8}/></td>
+                        <td id="squarefree"> <div ><input id="btnBingo"type="submit" value="BINGO" ></input>
                </div></td>
-                        <td id="square12"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square13"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square12"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square13"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
                     <tr>
-                        <td id="square14"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square15"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square16"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square17"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square18"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square14"><img id="imagenes" src={this.state.Animals5}/></td>
+                        <td id="square15"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square16"><img id="imagenes" src={this.state.Animals5}/></td>
+                        <td id="square17"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square18"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
                     <tr>
-                        <td id="square19"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square20"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square21"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square22"><img src={this.state.Animals1} width="100%"/></td>
-                        <td id="square23"><img src={this.state.Animals1} width="100%"/></td>
+                        <td id="square19"><img id="imagenes" src={this.state.Animals4}/></td>
+                        <td id="square20"><img id="imagenes" src={this.state.Animals5}/></td>
+                        <td id="square21"><img id="imagenes" src={this.state.Animals4}/></td>
+                        <td id="square22"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square23"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
                 </table>
-                <div id="btn">
+                <div id="btnStart" className="container">
                    <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
                </div>
                

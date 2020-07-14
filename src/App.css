@@ -1,14 +1,8 @@
 @import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
-/*
-body {
-  background-image: url("/public/assets/fondo1.jpg");
-  display: flex;
-  height: 100vh;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}     
-*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
 
 h1, p {
   font-family: 'Roboto', sans-serif; font-size: 20pt;
@@ -23,26 +17,118 @@ p a {
   color: #f1c40f;
 }
 
-#elements {
-  font-size: medium;
-}
 
-#squarefree {
+#squarefree { /* El centro de la tabla*/
   font-family: Helvetica;
   margin: 0 auto;
   background: #5dc4de;
   text-align: center;
   font-weight: 600;
   font-size: 15pt;
+  width: 10%;
+  height: 15%;
+
 }
 
 #bingotable {
+  box-shadow: 0 0 20px rgb(100, 10, 7);
+  width: 40%;
+	height: 50%;
+
   margin: 0 auto;
   text-align: center;
-  width: 700px;
-  height: 700px;
   border-collapse: collapse;
-  background: white;
+  background:  rgb(255, 255, 255);/* fondo de la imagen*/
+}
+#imagenes{
+  
+  width: 100%;
+  height: 15%;
+}
+
+@media all and (max-width: 1000px){
+  #imagenes{
+    width: 70px;
+    height: 30px;
+  }
+  h1, p {
+    font-family: 'Roboto', sans-serif; font-size: 20pt;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  p a {
+    text-decoration: none;
+    color: #f1c40f;
+  }
+  
+  
+  #squarefree { /* El centro de la tabla*/
+    font-family: Helvetica;
+    margin: 0 auto;
+    background: #5dc4de;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+    width: 10%;
+    height: 15%;
+  
+  }
+  
+  #bingotable {
+    box-shadow: 0 0 20px rgb(100, 10, 7);
+    width: 40%;
+    height: 50%;
+  
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    background:  rgb(255, 255, 255);/* fondo de la imagen*/
+  }
+}
+@media all and (max-width: 600px){
+  #imagenes{
+    width: 50px;
+    height: 30px;
+  }
+  h1, p {
+    font-family: 'Roboto', sans-serif; font-size: 20pt;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  p a {
+    text-decoration: none;
+    color: #f1c40f;
+  }
+  
+  
+  #squarefree { /* El centro de la tabla*/
+    font-family: Helvetica;
+    margin: 0 auto;
+    background: #5dc4de;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+    width: 10%;
+    height: 15%;
+  
+  }
+  
+  #bingotable {
+    box-shadow: 0 0 20px rgb(100, 10, 7);
+    width: 40%;
+    height: 50%;
+  
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    background:  rgb(255, 255, 255);/* fondo de la imagen*/
+  }
 }
 
 
@@ -69,50 +155,252 @@ p a {
 #square21:hover,
 #square22:hover,
 #square23:hover,
-#square0:hover
+#square0:hover,
+#squarefree
 {
-  background-color: #5DADE2;
-  border: 1px solid #5DADE2;
+  box-shadow: 0 0 100px rgb(255, 8, 0);
+  background-color: #9fff22;
+  border: 2px solid #ff822f;
+  
 }
 th, td {
-  font-family: Helvetica;
-  margin: 0 auto;
-  text-align: center;
-  border: 3px solid black;
-  width: 20%;
-  height: 20%;
-}
-.orange {
-  background: #9b59b6;
-}
-.btn{
-  padding: 14px;
+  border: 2px solid rgb(202, 0, 192);
+
 }
 
+#btnStart{
+  padding: 10px;
+  height: 100px;
+  width: 200px;
+  
+}
+#btnBingo{
+
+  color: #079229;
+  
+  animation:blur .75s ease-out infinite;
+
+
+}
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;}
+}
+
+
+
 .btn-primary{
-  font-size: 16px;
-  padding: 15px 32px;
+  font-size: 30px;
+  padding: 5px 5px;
   background-color: #6648b1;
-  border: 1px solid #563d7c;
-  width: 20px;
-  height: 50px;
+  border: 2px solid #563d7c;
 }
 .btn-primary:hover{
   background-color: #7c3d3d;
   border: 1px solid #563d7c;
-  width: 20px;
-  height: 50px;
 }
 
-#Elements{
-  padding: 10px;
-}
+
+/*PANTALLA HOME*/
 #logo{
+  animation: saltar 5s infinite;
   
   display: flex;
   justify-content: center;
+
 }
+#contenedor1{
+  
+  box-shadow: 0 0 20px rgb(100, 10, 7);
+  border-radius: 16px;
+  width: 600px;
+  height: 400px;
+  
+}
+
+/*PANTALLA TIPO*/
+
+#contenedor2{
+  
+  box-shadow: 0 0 20px rgb(100, 10, 7);
+  border-radius: 16px;
+  width: 600px;
+  height: 400px;
+  
+}
+
+#logotipo{
+  width: 140px;
+  height: 75px;
+  animation: saltar2 5s infinite;
+}
+#botonesTipo{
+  
+  text-align: center;
+  font-size: 250;
+  font-weight: 1000;
+  color:#ffffff;
+  width: 140px;
+  height: 40px;
+
+  
+}
+#typeOfBingo{
+  
+  font-size: 30px;
+  font-weight: 1000;
+  margin: 0 auto;
+  -webkit-text-stroke: 2px rgb(194, 42, 42);
+  display: inline-block;
+  margin: 0 0.5rem;
+  color:#079229;
+}
+#look{
+ 
+  display: inline-table;
+
+}
+#return{
+  animation: desplazarIzquierda 1s infinite;
+}
+
+
+
+
+/*-------------------------------------------------------*/
 
 #elementBar{
   text-align: center;
 }
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-size:28px;
+  font-family:helvetica;
+  font-weight:bold;
+  color:#71d90b;
+  text-transform:uppercase;
+  
+}
+.parpadea {
+  
+  
+  animation-name: parpadeo;
+  animation-duration: 15s;
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  
+}
+#logoStart{
+  animation: vibracion 5s infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+
+
+
+@keyframes vibracion{
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80%{
+    transform: translateX(50px);
+  }
+  5%, 25%, 45%, 65%, 85% {
+    transform: translateY(-50px);
+  }
+  15%, 35%, 55%, 75%{
+    transform: translateY(10px);
+  }    
+}
+@keyframes saltar{
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80%{
+    transform: translateX(0px);
+  }
+  5%, 25%, 45%, 65%, 85% {
+    transform: translateY(-50px);
+  }
+  15%, 35%, 55%, 75%{
+    transform: translateY(10px);
+  }    
+}
+@keyframes saltar2{
+  0%, 0%, 0%, 0%, 0% {
+    transform: translateX(0px);
+  }
+  0%, 0%, 0%, 0%{
+    transform: translateX(0px);
+  }
+  50%, 50%, 50%, 65%, 100% {
+    transform: translateY(-30px);
+  }
+  50%, 50%, 50%, 100%{
+    transform: translateY(0px);
+  }    
+}
+@keyframes desplazarIzquierda{
+  50%, 50%, 50%, 50%, 50% {
+    transform: translateX(-30px);
+  }
+  50%, 50%, 50%, 50%{
+    transform: translateX(10px);
+  }
+  0%, 25%, 0%, 65%, 0% {
+    transform: translateY(0px);
+  }
+  0%, 35%, 0%, 0%{
+    transform: translateY(0px);
+  }    
+}
+
+
+
+
+
+
+
+
+
