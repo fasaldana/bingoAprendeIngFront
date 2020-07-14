@@ -111,7 +111,6 @@ class Application extends Component {
                         <td id="square11"><img id="imagenes" src={this.state.Animals8}/></td>
                         <td id="squarefree"> <div ><input id="btnBingo"type="submit" value="BINGO" ></input>
                </div></td>
-<<<<<<< HEAD
                         <td id="square12"><img id="imagenes" src={this.state.Animals1}/></td>
                         <td id="square13"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
@@ -128,24 +127,6 @@ class Application extends Component {
                         <td id="square21"><img id="imagenes" src={this.state.Animals4}/></td>
                         <td id="square22"><img id="imagenes" src={this.state.Animals1}/></td>
                         <td id="square23"><img id="imagenes" src={this.state.Animals1}/></td>
-=======
-                        <td id="square12"><img src={this.state.Animals15} width="100%"/></td>
-                        <td id="square13"><img src={this.state.Animals11} width="100%"/></td>
-                    </tr>
-                    <tr>
-                        <td id="square14"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square15"><img src={this.state.Animals18} width="100%"/></td>
-                        <td id="square16"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square17"><img src={this.state.Animals19} width="100%"/></td>
-                        <td id="square18"><img src={this.state.Animals20} width="100%"/></td>
-                    </tr>
-                    <tr>
-                        <td id="square19"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square20"><img src={this.state.Animals5} width="100%"/></td>
-                        <td id="square21"><img src={this.state.Animals4} width="100%"/></td>
-                        <td id="square22"><img src={this.state.Animals21} width="100%"/></td>
-                        <td id="square23"><img src={this.state.Animals22} width="100%"/></td>
->>>>>>> 5756017ec87792f8fb41e2ef06fadcf63f56cd76
                     </tr>
                 </table>
                 <div id="btnStart" className="container">
