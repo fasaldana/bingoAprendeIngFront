@@ -90,6 +90,7 @@ class Application extends Component {
     render() {
         return (
            <div id="content" className="d-flex flex-column row">
+               
 
                 <table id="bingotable">
                     <tr>
@@ -109,8 +110,7 @@ class Application extends Component {
                     <tr>
                         <td id="square10"><img id="imagenes" src={this.state.Animals9}/></td>
                         <td id="square11"><img id="imagenes" src={this.state.Animals8}/></td>
-                        <td id="squarefree"> <div ><input id="btnBingo"type="submit" value="BINGO" ></input>
-               </div></td>
+                        <td id="squarefree"> <div ><a id='palabraBingo'>BINGO</a></div></td>
                         <td id="square12"><img id="imagenes" src={this.state.Animals1}/></td>
                         <td id="square13"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>

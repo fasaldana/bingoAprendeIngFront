@@ -25,16 +25,41 @@ p a {
   text-align: center;
   font-weight: 600;
   font-size: 15pt;
-  width: 10%;
+  width: 20%;
   height: 15%;
+  animation: saltarBingo 10s infinite;
+  box-shadow: -5px 10px 50px rgb(149, 0, 255);
+  background-color: rgba(149, 0, 255, 0.658);
 
+}
+#palabraBingo{
+  color: #563d7c;
+  width: 100%;
+  height: 15%;
+  animation:blur 1s ease-out infinite;
+  
+  
+  text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+    0 0 180px rgba(38,104,127,1);
+  
+}
+
+#palabraBingo:hover{
+  color: gold;
+  animation:blur 1.5s ease-out infinite;
 }
 
 #bingotable {
-  box-shadow: 0 0 20px rgb(100, 10, 7);
   width: 40%;
 	height: 50%;
-
   margin: 0 auto;
   text-align: center;
   border-collapse: collapse;
@@ -45,6 +70,7 @@ p a {
   width: 100%;
   height: 15%;
 }
+
 
 @media all and (max-width: 1000px){
   #imagenes{
@@ -63,31 +89,39 @@ p a {
     text-decoration: none;
     color: #f1c40f;
   }
+  #palabraBingo{
+    color: #563d7c;
+    width: 100%;
+    height: 15%;
+  }
   
   
-  #squarefree { /* El centro de la tabla*/
+  
+  #squarefree {
     font-family: Helvetica;
     margin: 0 auto;
     background: #5dc4de;
     text-align: center;
     font-weight: 600;
     font-size: 15pt;
-    width: 10%;
+    width: 20%;
     height: 15%;
   
   }
   
   #bingotable {
-    box-shadow: 0 0 20px rgb(100, 10, 7);
     width: 40%;
     height: 50%;
   
     margin: 0 auto;
     text-align: center;
     border-collapse: collapse;
-    background:  rgb(255, 255, 255);/* fondo de la imagen*/
+    background:  rgb(255, 255, 255);
   }
 }
+
+
+
 @media all and (max-width: 600px){
   #imagenes{
     width: 50px;
@@ -105,6 +139,14 @@ p a {
     text-decoration: none;
     color: #f1c40f;
   }
+  #palabraBingo{
+    color: #563d7c;
+    width: 100%;
+    height: 15%;
+    font-size: 15px;
+    font-weight: 900;
+    animation:blur .75s ease-out infinite;
+  }
   
   
   #squarefree { /* El centro de la tabla*/
@@ -120,7 +162,7 @@ p a {
   }
   
   #bingotable {
-    box-shadow: 0 0 20px rgb(100, 10, 7);
+    /*box-shadow: 0 0 20px rgb(100, 10, 7);*/
     width: 40%;
     height: 50%;
   
@@ -130,7 +172,7 @@ p a {
     background:  rgb(255, 255, 255);/* fondo de la imagen*/
   }
 }
-
+/*--------------------------------------------------------------------------------------------*/
 
 #square1:hover,
 #square2:hover,
@@ -155,16 +197,20 @@ p a {
 #square21:hover,
 #square22:hover,
 #square23:hover,
-#square0:hover,
-#squarefree
+#square0:hover
+
 {
-  box-shadow: 0 0 100px rgb(255, 8, 0);
-  background-color: #9fff22;
-  border: 2px solid #ff822f;
+  box-shadow: -5px 10px 50px rgb(149, 0, 255);
+  background-color: rgba(149, 0, 255, 0.658);
+  animation: saltarPieza 5s infinite;
   
+
+
+
 }
 th, td {
-  border: 2px solid rgb(202, 0, 192);
+  border: 2px solid rgba(149, 0, 255, 0.349);
+  box-shadow: 0 0 20px rgb(100, 10, 7);
 
 }
 
@@ -174,34 +220,20 @@ th, td {
   width: 200px;
   
 }
-#btnBingo{
 
-  color: #079229;
-  
-  animation:blur .75s ease-out infinite;
-
-
-}
 @keyframes blur{
   from{
-      text-shadow:0px 0px 10px #fff,
-      0px 0px 10px #fff, 
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #7B96B8,
-      0px 0px 150px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px -10px 100px #7B96B8,
-      0px -10px 100px #7B96B8;}
+      text-shadow:10px 10px 10px #fff,
+      5px 10px 10px #fff, 
+      50px 10px 25px #fff,
+      50px 10px 25px #fff,
+      50px 10px 25px #fff,
+      
+      
+      20px 10px 70px #7B96B8,
+      20px 10px 60px #7B96B8,
+      20px 10px 60px #7B96B8,
+      20px 10px 70px #7B96B8;}
 }
 
 
@@ -249,7 +281,7 @@ th, td {
 #logotipo{
   width: 140px;
   height: 75px;
-  animation: saltar2 5s infinite;
+  animation: saltar2 3s infinite;
 }
 #botonesTipo{
   
@@ -270,7 +302,7 @@ th, td {
   -webkit-text-stroke: 2px rgb(194, 42, 42);
   display: inline-block;
   margin: 0 0.5rem;
-  color:#079229;
+  color:#06d44b;
 }
 #look{
  
@@ -296,7 +328,7 @@ th, td {
   font-size:28px;
   font-family:helvetica;
   font-weight:bold;
-  color:#71d90b;
+  color:#bad90b;
   text-transform:uppercase;
   
 }
@@ -367,6 +399,35 @@ th, td {
     transform: translateY(10px);
   }    
 }
+@keyframes saltarBingo{
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80%{
+    transform: translateX(10px);
+  }
+  5%, 25%, 45%, 65%, 85% {
+    transform: translateY(-10px);
+  }
+  15%, 35%, 55%, 75%{
+    transform: translateY(10px);
+  }    
+}
+@keyframes saltarPieza{
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80%{
+    transform: translateX(10px);
+  }
+  5%, 25%, 45%, 65%, 85% {
+    transform: translateY(-5px);
+  }
+  15%, 35%, 55%, 75%{
+    transform: translateY(5px);
+  }    
+}
+
 @keyframes saltar2{
   0%, 0%, 0%, 0%, 0% {
     transform: translateX(0px);
@@ -394,6 +455,31 @@ th, td {
   0%, 35%, 0%, 0%{
     transform: translateY(0px);
   }    
+}
+
+/*----------------chooose the category ------------*/
+
+#contenedor3{
+  
+  box-shadow: 0 0 20px rgb(100, 10, 7);
+  border-radius: 16px;
+  width: 600px;
+  height: 500px;
+  
+}
+#chooseCategorytxt{
+  font-size: 25px;
+  font-weight: 1000;
+  margin: 0 auto;
+  -webkit-text-stroke: 2px rgb(194, 42, 42);
+  display: inline-block;
+  margin: 0 0.5rem;
+  color:#63acf0;
+
+
+}
+#borderRed{
+  box-shadow: 0 0 20px rgb(100, 10, 7);
 }
 
 

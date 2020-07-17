@@ -20,11 +20,11 @@ class Tipo extends Component {
                             <div className="col" id="look">
                                 <img id = "logotipo" src="assets/tipo_center.png" />
                                 <Link to="/categorias">    
-                                    <a id="botonesTipo" className="btn btn-warning stretched-link border border-danger">CENTER</a>
+                                    <a id="botonesTipo" className="btn btn-warning stretched-link border border-danger" >CENTER</a>
                                 </Link>
                                     
                             </div>
-                            <div className="col-sm">
+                            <div className="col-sm" >
                                 <img id = "logotipo" src="assets/tipo_diagonal.png" ></img>
                                 <Link to="/categorias">
                                     <a id="botonesTipo" className="btn btn-info stretched-link border border-danger">DIAGONAL</a>
