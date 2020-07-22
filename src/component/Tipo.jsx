@@ -12,7 +12,7 @@ class Tipo extends Component {
 
                                       
                     <div className=" p-5">
-                        <Link to="/"><a> <img src="assets/return2.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
+                        <Link to="/"><a> <img src="assets/return2.png" id="return" height="50" width="50" alt="Botón"></img></a></Link>
                         <h1 id = "typeOfBingo">TYPE OF BINGO</h1>
 
                         <div className="row" >

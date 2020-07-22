@@ -7,8 +7,8 @@ class Categorias extends Component {
             <div id="contenedor3" className="container">
 
                 <div className=" p-3 d-flex justify-content-center">
-                    <Link to="/tipo"><a> <img src="assets/return2.png" id="return" height="100px" width="100px" alt="Botón"></img></a></Link>
-                    <h1 id = "chooseCategorytxt">CHOOSE THE CATEGORY</h1>
+                    <Link to="/tipo"><a> <img src="assets/return2.png" id="return" height="50px" width="50px" alt="Botón atrás"></img></a><h1 id = "chooseCategorytxt">CHOOSE THE CATEGORY</h1></Link>
+                    
                 </div>
 
                 <div className="d-flex justify-content-center p-1">
@@ -16,7 +16,7 @@ class Categorias extends Component {
                     
                         <div className="d-flex justify-content-around">
 
-                            <div className="d-flex">
+                            <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
@@ -27,7 +27,7 @@ class Categorias extends Component {
                                 </div>
                             </div>
                     
-                            <div className="d-flex">
+                            <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
@@ -40,7 +40,7 @@ class Categorias extends Component {
 
                         <div className="d-flex justify-content-around">
 
-                            <div className="d-flex">
+                            <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light " id="borderRed">
                                         <Link to="/game">
@@ -52,7 +52,7 @@ class Categorias extends Component {
                                 </div>
                             </div>
 
-                            <div className="d-flex">
+                            <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                             
                                     <div className="p-3 border bg-light" id="borderRed">
@@ -67,7 +67,7 @@ class Categorias extends Component {
                         </div>
                         <div className="d-flex justify-content-around">
 
-                            <div className="d-flex">
+                            <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">

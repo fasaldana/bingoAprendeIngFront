@@ -106,6 +106,8 @@ p a {
     font-size: 15pt;
     width: 20%;
     height: 15%;
+    box-shadow: -5px 10px 50px rgb(149, 0, 255);
+    background-color: rgba(149, 0, 255, 0.658);
   
   }
   
@@ -120,9 +122,18 @@ p a {
   }
 }
 
+#palabras{
+  display: flex;
+}
+
 
 
 @media all and (max-width: 600px){
+  body{
+    background: red;
+  }
+  
+  
   #imagenes{
     width: 50px;
     height: 30px;
@@ -146,18 +157,30 @@ p a {
     font-size: 15px;
     font-weight: 900;
     animation:blur .75s ease-out infinite;
+    text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+    0 0 180px rgba(38,104,127,1);
   }
   
   
   #squarefree { /* El centro de la tabla*/
     font-family: Helvetica;
     margin: 0 auto;
-    background: #5dc4de;
+    background: #bbbebe;
     text-align: center;
     font-weight: 600;
     font-size: 15pt;
     width: 10%;
     height: 15%;
+    box-shadow: -5px 10px 50px rgb(149, 0, 255);
+  background-color: rgba(149, 0, 255, 0.658);
   
   }
   
@@ -171,6 +194,17 @@ p a {
     border-collapse: collapse;
     background:  rgb(255, 255, 255);/* fondo de la imagen*/
   }
+  #btnStart{
+    padding: 10px;
+    height: auto;
+    width: auto;
+
+  } 
+  
+
+
+
+
 }
 /*--------------------------------------------------------------------------------------------*/
 
@@ -202,7 +236,7 @@ p a {
 {
   box-shadow: -5px 10px 50px rgb(149, 0, 255);
   background-color: rgba(149, 0, 255, 0.658);
-  animation: saltarPieza 5s infinite;
+  animation: saltarPieza 3s infinite;
   
 
 
@@ -218,8 +252,10 @@ th, td {
   padding: 10px;
   height: 100px;
   width: 200px;
+
   
 }
+
 
 @keyframes blur{
   from{
@@ -256,15 +292,23 @@ th, td {
   
   display: flex;
   justify-content: center;
+  
 
 }
 #contenedor1{
   
   box-shadow: 0 0 20px rgb(100, 10, 7);
   border-radius: 16px;
-  width: 600px;
+  min-width: 400px;
+  width: 400px;
   height: 400px;
   
+  
+}
+#logoStart:hover{
+  box-shadow: 10px 10px 10px rgb(149, 0, 255);
+  background-color: rgba(149, 0, 255, 0.658);
+  animation: saltarPieza 3s infinite;
 }
 
 /*PANTALLA TIPO*/
@@ -279,6 +323,7 @@ th, td {
 }
 
 #logotipo{
+  
   width: 140px;
   height: 75px;
   animation: saltar2 3s infinite;
@@ -293,6 +338,11 @@ th, td {
   height: 40px;
 
   
+}
+#botonesTipo:hover{
+  box-shadow: 10px 10px 10px rgb(255, 230, 0);
+  background-color: rgba(149, 0, 255, 0.658);
+  animation: saltarPieza 3s infinite;
 }
 #typeOfBingo{
   
@@ -311,15 +361,20 @@ th, td {
 }
 #return{
   animation: desplazarIzquierda 1s infinite;
+  
 }
-
+#return:hover{
+  
+  
+  animation: saltarPieza 2s infinite;
+}
 
 
 
 /*-------------------------------------------------------*/
 
 #elementBar{
-  text-align: center;
+  
 }
 
 .text {
@@ -415,16 +470,16 @@ th, td {
 }
 @keyframes saltarPieza{
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
+    transform: translateX(-3px);
   }
   20%, 40%, 60%, 80%{
-    transform: translateX(10px);
+    transform: translateX(3px);
   }
   5%, 25%, 45%, 65%, 85% {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
   15%, 35%, 55%, 75%{
-    transform: translateY(5px);
+    transform: translateY(3px);
   }    
 }
 
@@ -481,8 +536,11 @@ th, td {
 #borderRed{
   box-shadow: 0 0 20px rgb(100, 10, 7);
 }
+#botonEleccion:hover{
 
-
+  background-color: rgba(149, 0, 255, 0.658);
+  animation: saltarPieza 2s infinite;
+}
 
 
 

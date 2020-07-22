@@ -89,9 +89,8 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content" className="d-flex flex-column row">
-               
-
+           <div id="content" className="d-flex flex-column row"> 
+           
                 <table id="bingotable">
                     <tr>
                         <td id="square0"><img id="imagenes" src={this.state.Jobs1}/></td>

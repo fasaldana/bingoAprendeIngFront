@@ -29,7 +29,7 @@ export default class Elementos extends React.Component{
 
     render() {
         return (
-            <div class="container">
+            <div >
                 
                 <section>
                     <p><label > Word: </label>{this.state.elementos.map(Elements => <input id='elementBar' class="form-control form-control-lg" type="text" name="elementBar" disabled value={Elements.eleName}/>)}</p>
