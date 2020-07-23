@@ -58,7 +58,7 @@ p a {
 }
 
 #bingotable {
-  width: 40%;
+  width: 45%;
 	height: 50%;
   margin: 0 auto;
   text-align: center;
@@ -67,72 +67,16 @@ p a {
 }
 #imagenes{
   
-  width: 100%;
+  width: 100px;
   height: 15%;
 }
 
-
-@media all and (max-width: 1000px){
-  #imagenes{
-    width: 70px;
-    height: 30px;
-  }
-  h1, p {
-    font-family: 'Roboto', sans-serif; font-size: 20pt;
-    font-weight: 600;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  p a {
-    text-decoration: none;
-    color: #f1c40f;
-  }
-  #palabraBingo{
-    color: #563d7c;
-    width: 100%;
-    height: 15%;
-  }
-  
-  
-  
-  #squarefree {
-    font-family: Helvetica;
-    margin: 0 auto;
-    background: #5dc4de;
-    text-align: center;
-    font-weight: 600;
-    font-size: 15pt;
-    width: 20%;
-    height: 15%;
-    box-shadow: -5px 10px 50px rgb(149, 0, 255);
-    background-color: rgba(149, 0, 255, 0.658);
-  
-  }
-  
-  #bingotable {
-    width: 40%;
-    height: 50%;
-  
-    margin: 0 auto;
-    text-align: center;
-    border-collapse: collapse;
-    background:  rgb(255, 255, 255);
-  }
-}
 
 #palabras{
   display: flex;
 }
 
-
-
-@media all and (max-width: 600px){
-  body{
-    background: red;
-  }
-  
+@media all and (max-width: 800px){
   
   #imagenes{
     width: 50px;
@@ -180,7 +124,7 @@ p a {
     width: 10%;
     height: 15%;
     box-shadow: -5px 10px 50px rgb(149, 0, 255);
-  background-color: rgba(149, 0, 255, 0.658);
+    background-color: rgba(149, 0, 255, 0.658);
   
   }
   
@@ -200,12 +144,15 @@ p a {
     width: auto;
 
   } 
+  /* ------------------------------------------------ */
   
-
-
-
-
 }
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------*/
 
 #square1:hover,
@@ -289,7 +236,6 @@ th, td {
 /*PANTALLA HOME*/
 #logo{
   animation: saltar 5s infinite;
-  
   display: flex;
   justify-content: center;
   
@@ -299,9 +245,10 @@ th, td {
   
   box-shadow: 0 0 20px rgb(100, 10, 7);
   border-radius: 16px;
-  min-width: 400px;
-  width: 400px;
+  max-width: 600px;
+  width: auto;
   height: 400px;
+  align-items: center;
   
   
 }
@@ -317,8 +264,10 @@ th, td {
   
   box-shadow: 0 0 20px rgb(100, 10, 7);
   border-radius: 16px;
-  width: 600px;
-  height: 400px;
+  max-width: 600px;
+  min-width: 50px;
+  width: auto;
+  height: auto;
   
 }
 
@@ -331,9 +280,10 @@ th, td {
 #botonesTipo{
   
   text-align: center;
-  font-size: 250;
+  font-size: auto;
   font-weight: 1000;
   color:#ffffff;
+  
   width: 140px;
   height: 40px;
 
@@ -346,7 +296,7 @@ th, td {
 }
 #typeOfBingo{
   
-  font-size: 30px;
+  font-size: auto;
   font-weight: 1000;
   margin: 0 auto;
   -webkit-text-stroke: 2px rgb(194, 42, 42);
@@ -518,12 +468,13 @@ th, td {
   
   box-shadow: 0 0 20px rgb(100, 10, 7);
   border-radius: 16px;
-  width: 600px;
-  height: 500px;
+  max-width: 600px;
+  width: auto;
+  height: auto;
   
 }
 #chooseCategorytxt{
-  font-size: 25px;
+  font-size: auto;
   font-weight: 1000;
   margin: 0 auto;
   -webkit-text-stroke: 2px rgb(194, 42, 42);
@@ -541,10 +492,5 @@ th, td {
   background-color: rgba(149, 0, 255, 0.658);
   animation: saltarPieza 2s infinite;
 }
-
-
-
-
-
 
 

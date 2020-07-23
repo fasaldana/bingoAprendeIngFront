@@ -6,9 +6,9 @@ class Categorias extends Component {
         return(
             <div id="contenedor3" className="container">
 
-                <div className=" p-3 d-flex justify-content-center">
-                    <Link to="/tipo"><a> <img src="assets/return2.png" id="return" height="50px" width="50px" alt="Botón atrás"></img></a><h1 id = "chooseCategorytxt">CHOOSE THE CATEGORY</h1></Link>
-                    
+                <div className="d-flex align-items-center">
+                    <Link to="/tipo"><a><img src="assets/back_75px.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
+                    <h1 id = "chooseCategorytxt">CHOOSE THE CATEGORY</h1>
                 </div>
 
                 <div className="d-flex justify-content-center p-1">

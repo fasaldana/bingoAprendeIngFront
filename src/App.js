@@ -16,13 +16,9 @@ function App() {
             <div className="App">
                 <Route path="/" exact component={Home}/>
                 <Route path="/tipo" component={Tipo}/>
-                <Route path="/categorias" component={Categorias}/>
-                <div id ="palabras">
-
-                    <Route path="/game" component={Application}/>
-                    <Route path="/game" component={Elementos}/>
-                    
-                </div>
+                <Route path="/categorias" component={Categorias}/> 
+                <Route path="/game" component={Elementos}/>
+                <Route path="/game" component={Application}/>
                 
             </div>
         </Router>

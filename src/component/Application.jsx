@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import storage from './Firebase/firebase'
 
+
 class Application extends Component {
     
     constructor(){
@@ -89,8 +90,10 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content" className="d-flex flex-column row"> 
-           
+           <div id="content" className="container align-items-center">
+
+ 
+
                 <table id="bingotable">
                     <tr>
                         <td id="square0"><img id="imagenes" src={this.state.Jobs1}/></td>
@@ -109,7 +112,7 @@ class Application extends Component {
                     <tr>
                         <td id="square10"><img id="imagenes" src={this.state.Animals9}/></td>
                         <td id="square11"><img id="imagenes" src={this.state.Animals8}/></td>
-                        <td id="squarefree"> <div ><a id='palabraBingo'>BINGO</a></div></td>
+                        <td id="squarefree"> <div><a id='palabraBingo'>BINGO</a></div></td>
                         <td id="square12"><img id="imagenes" src={this.state.Animals1}/></td>
                         <td id="square13"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
@@ -128,7 +131,7 @@ class Application extends Component {
                         <td id="square23"><img id="imagenes" src={this.state.Animals1}/></td>
                     </tr>
                 </table>
-                <div id="btnStart" className="container">
+                <div id="btnStart" className="container align-items-center">
                    <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
                </div>
                

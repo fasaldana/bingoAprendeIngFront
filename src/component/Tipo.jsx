@@ -11,18 +11,24 @@ class Tipo extends Component {
                     
 
                                       
-                    <div className=" p-5">
-                        <Link to="/"><a> <img src="assets/return2.png" id="return" height="50" width="50" alt="Botón"></img></a></Link>
+                    <div className=" p-5" >
+                        <div className="d-flex align-items-center">
+                            <Link to="/"><a> <img src="assets/back_75px.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
                         <h1 id = "typeOfBingo">TYPE OF BINGO</h1>
+                        </div>
+                        
 
                         <div className="row" >
                             
                             <div className="col" id="look">
                                 <img id = "logotipo" src="assets/tipo_center.png" />
+
                                 <Link to="/categorias">    
                                     <a id="botonesTipo" className="btn btn-warning stretched-link border border-danger" >CENTER</a>
                                 </Link>
                                     
+                                
+                                
                             </div>
                             <div className="col-sm" >
                                 <img id = "logotipo" src="assets/tipo_diagonal.png" ></img>
