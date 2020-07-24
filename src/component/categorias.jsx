@@ -21,7 +21,7 @@ class Categorias extends Component {
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
                                         
-                                            <a className="btn btn-warning stretched-link"><img src="assets/numbers_96px.png" width='50px'height='50px'></img>NUMBERS</a>
+                                            <a className="btn btn-light stretched-link"><img src="assets/numbers_96px.png" width='50px'height='50px'></img>NUMBERS</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@ class Categorias extends Component {
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
-                                            <a className="btn btn-warning stretched-link"> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VEHICLES</a>
+                                            <a className="btn btn-light stretched-link"> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VEHICLES</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@ class Categorias extends Component {
                                     <div className="p-3 border bg-light " id="borderRed">
                                         <Link to="/game">
                                             
-                                            <a className="btn btn-warning stretched-link"><img src="assets/elephant_200px.png" width='50px'height='50px'></img>ANIMALS</a>
+                                            <a className="btn btn-light stretched-link"><img src="assets/elephant_200px.png" width='50px'height='50px'></img>ANIMALS</a>
                                         </Link>
                                     </div>
                             
@@ -58,7 +58,7 @@ class Categorias extends Component {
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
                                             
-                                            <a className="btn btn-warning stretched-link"><img src="assets/business_96px.png" width='50px'height='50px'></img>BUSINESS</a>
+                                            <a className="btn btn-light stretched-link"><img src="assets/business_96px.png" width='50px'height='50px'></img>BUSINESS</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ class Categorias extends Component {
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
                                         <Link to="/game">
-                                            <a className="btn btn-warning stretched-link"><img src="assets/shirt_96px.png" width='50px'height='50px'></img>CLOTHES</a>
+                                            <a className="btn btn-light stretched-link"><img src="assets/shirt_96px.png" width='50px'height='50px'></img>CLOTHES</a>
                                         </Link>
                                     </div>
                                 

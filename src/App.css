@@ -67,7 +67,7 @@ p a {
 }
 #imagenes{
   
-  width: 100px;
+  width: 100%;
   height: 15%;
 }
 
@@ -79,7 +79,7 @@ p a {
 @media all and (max-width: 800px){
   
   #imagenes{
-    width: 50px;
+    width: 60px;
     height: 30px;
   }
   h1, p {
