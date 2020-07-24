@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import storage from './Firebase/firebase'
+import Elementos from "./Elementos";
+import Tipo from "./Tipo";
 
 
 class Application extends Component {
@@ -8,127 +9,85 @@ class Application extends Component {
     constructor(){
         super();
         this.state = {
-            content : [],
-            Animals1: '',
-            Animals2: '',
-            Animals3: '',
-            Animals4: '',
-            Animals5: '',
-            Animals6: '',
-            Animals7: '',
-            Animals8: '',
-            Animals9: '',
-            Animals10: '',
-            Jobs1: '',
-            Jobs2: '',
-            Jobs3: '',
-            Jobs4: '',
-            Jobs5: '',
-            Jobs6: '',
-            Jobs7: '',
-            Jobs8: '',
-            Jobs9: '',
-            Jobs10: '',
+            elementos: [],
+            images: null
         };
-        this.getImage('Animals1');
-        this.getImage('Animals2');
-        this.getImage('Animals3');
-        this.getImage('Animals4');
-        this.getImage('Animals5');
-        this.getImage('Animals6');
-        this.getImage('Animals7');
-        this.getImage('Animals8');
-        this.getImage('Animals9');
-        this.getImage('Animals10');
-        this.getImage('Jobs1');
-        this.getImage('Jobs2');
-        this.getImage('Jobs3');
-        this.getImage('Jobs4');
-        this.getImage('Jobs5');
-        this.getImage('Jobs6');
-        this.getImage('Jobs7');
-        this.getImage('Jobs8');
-        this.getImage('Jobs9');
-        this.getImage('Jobs10');
-        this.getImage('Numbers1');
-        this.getImage('Numbers2');
-        this.getImage('Numbers3');
-        this.getImage('Numbers4');
-        this.getImage('Numbers5');
-        this.getImage('Numbers6');
-        this.getImage('Numbers7');
-        this.getImage('Numbers8');
-        this.getImage('Numbers9');
-        this.getImage('Numbers10');
+        this.getList();
+    }
+
+    getList(){
+        axios.get('http://localhost:8080/elements/list')
+            .then(response => response.data)
+            .then(data => {
+                this.setState({elementos: data});
+            });
     }
 
     getImage (image) {    
-        let { state } = this
+        /*let { state } = this
         storage.child(`${image}.jpg`).getDownloadURL().then((url) => {
           state[image] = url
           this.setState(state)
         }).catch((error) => {
           // Handle any errors
-        })
+        })*/
+
+        return `categories/numbers/${this.state.elementos[image]}.jpg`
+
     }
 
-    componentDidMount() {
-        this.showElements();
-    }
+    /*componentDidMount() {
+        this.getList();
+    }*/
 
-    showElements(){
-        axios.get('http://localhost:8080/content/')
-            .then(response => response.data)
-            .then(data => {
-                this.setState({content: data});
-            });
-    }
+
 
     start(){
-        axios.get('http://localhost:8080/elements/start');
-    }no
+        
+    }
 
+    
     render() {
         return (
            <div id="content" className="container align-items-center">
 
- 
+               <Elementos/>
 
                 <table id="bingotable">
                     <tr>
-                        <td id="square0"><img id="imagenes" src={this.state.Jobs1}/></td>
-                        <td id="square1"><img id="imagenes" src={this.state.Numbers2} /></td>
-                        <td id="square2"><img id="imagenes" src={this.state.Animals6} /></td>
-                        <td id="square3"><img id="imagenes" src={this.state.Animals4} /></td>
-                        <td id="square4"><img id="imagenes" src={this.state.Animals5}/></td>
+                        <td id="square0"><img id="imagenes" src={this.getImage(0)} /></td>
+                        <td id="square1"><img id="imagenes" src={this.getImage(1)} /></td>
+                        <td id="square2"><img id="imagenes" src={this.getImage(2)} /></td>
+                        <td id="square3"><img id="imagenes" src={this.getImage(3)} /></td>
+                        <td id="square4"><img id="imagenes" src={this.getImage(4)} /></td>
                     </tr>
                     <tr>
-                        <td id="square5"><img id="imagenes" src={this.state.Animals2}/></td>
-                        <td id="square6"><img id="imagenes" src={this.state.Animals10}/></td>
-                        <td id="square7"><img id="imagenes" src={this.state.Animals8} /></td>
-                        <td id="square8"><img id="imagenes" src={this.state.Animals10}/></td>
-                        <td id="square9"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square5"><img id="imagenes" src={this.getImage(5)} /></td>
+                        <td id="square6"><img id="imagenes" src={this.getImage(6)} /></td>
+                        <td id="square7"><img id="imagenes" src={this.getImage(7)} /></td>
+                        <td id="square8"><img id="imagenes" src={this.getImage(8)} /></td>
+                        <td id="square9"><img id="imagenes" src={this.getImage(9)} /></td>
                     </tr>
                     <tr>
-                        <td id="square10"><img id="imagenes" src={this.state.Animals9}/></td>
-                        <td id="square11"><img id="imagenes" src={this.state.Animals8}/></td>
-                        <td id="squarefree"> <div><a id='palabraBingo'>BINGO</a></div></td>
-                        <td id="square12"><img id="imagenes" src={this.state.Animals1}/></td>
-                        <td id="square13"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square10"><img id="imagenes" src={this.getImage(10)} /></td>
+                        <td id="square11"><img id="imagenes" src={this.getImage(11)} /></td>
+                        <td id="squarefree"> <div ><a id='palabraBingo'>BINGO</a></div></td>
+                        <td id="square12"><img id="imagenes" src={this.getImage(12)} /></td>
+                        <td id="square13"><img id="imagenes" src={this.getImage(13)} /></td>
                     </tr>
                     <tr>
-                        <td id="square14"><img id="imagenes" src={this.state.Animals5}/></td>
-                        <td id="square15"><img id="imagenes" src={this.state.Animals1}/></td>
-                        <td id="square16"><img id="imagenes" src={this.state.Animals5}/></td>
-                        <td id="square17"><img id="imagenes" src={this.state.Animals1}/></td>
-                        <td id="square18"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square14"><img id="imagenes" src={this.getImage(14)} /></td>
+                        <td id="square15"><img id="imagenes" src={this.getImage(15)} /></td>
+                        <td id="square16"><img id="imagenes" src={this.getImage(16)} /></td>
+                        <td id="square17"><img id="imagenes" src={this.getImage(17)} /></td>
+                        <td id="square18"><img id="imagenes" src={this.getImage(18)} /></td>
                     </tr>
                     <tr>
-                        <td id="square19"><img id="imagenes" src={this.state.Animals4}/></td>
-                        <td id="square20"><img id="imagenes" src={this.state.Animals5}/></td>
-                        <td id="square21"><img id="imagenes" src={this.state.Animals4}/></td>
-                        <td id="square22"><img id="imagenes" src={this.state.Animals1}/></td>
-                        <td id="square23"><img id="imagenes" src={this.state.Animals1}/></td>
+                        <td id="square19"><img id="imagenes" src={this.getImage(19)} /></td>
+                        <td id="square20"><img id="imagenes" src={this.getImage(20)} /></td>
+                        <td id="square21"><img id="imagenes" src={this.getImage(21)} /></td>
+                        <td id="square22"><img id="imagenes" src={this.getImage(22)} /></td>
+                        <td id="square23"><img id="imagenes" src={this.getImage(23)} /></td>
                     </tr>
                 </table>
                 <div id="btnStart" className="container align-items-center">
