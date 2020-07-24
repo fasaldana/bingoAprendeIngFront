@@ -42,8 +42,7 @@ class Tipo extends Component {
                 
                 <div id="contenedor2" className="container" >
 
-
-                                      
+                        
                     <div className=" p-5" >
                         <div className="d-flex align-items-center">
                             <Link to="/"><a> <img src="assets/back_75px.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
@@ -58,7 +57,6 @@ class Tipo extends Component {
                                 <Link to="/categorias">
                                     <button id="botonesTipo" className="btn btn-warning stretched-link border border-danger" onClick = {this.onClick1}>CENTER</button>
                                 </Link>
-                                    
                             </div>
                             <div className="col-sm">
                                 <img id = "logotipo" src="assets/tipo_diagonal.png" ></img>

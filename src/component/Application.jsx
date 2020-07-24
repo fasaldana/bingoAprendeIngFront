@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Elementos from "./Elementos";
 import Tipo from "./Tipo";
+import { Link } from 'react-router-dom';
 
 
 class Application extends Component {
@@ -23,35 +23,40 @@ class Application extends Component {
             });
     }
 
-    getImage (image) {    
-        /*let { state } = this
-        storage.child(`${image}.jpg`).getDownloadURL().then((url) => {
-          state[image] = url
-          this.setState(state)
-        }).catch((error) => {
-          // Handle any errors
-        })*/
-
+    getImage (image) {
         return `categories/numbers/${this.state.elementos[image]}.jpg`
-
     }
 
-    /*componentDidMount() {
-        this.getList();
-    }*/
-
-
+    showElements(){
+        axios.get('http://localhost:8080/elements')
+            .then(response => response.data)
+            .then(data => {
+                this.setState({elementos: data});
+            });
+    }
 
     start(){
-        
+        const interval = setInterval(() => {
+            this.showElements();
+            //console.log('');
+        }, 1000);
     }
 
-    
     render() {
         return (
            <div id="content" className="container align-items-center">
 
-               <Elementos/>
+                <div id = "word" className="d-flex justify-content-center"> 
+                    
+                    <Link to="/"><a><img src="assets/back_75px.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
+                    <section>
+                        <p><label > Word: </label></p> 
+                        <ul>
+                            { this.state.elementos.map(elementos => <li>{elementos.ing}</li>)}
+                        </ul>
+                    </section>
+                    
+                </div>
 
                 <table id="bingotable">
                     <tr>
