@@ -44,21 +44,9 @@ class Application extends Component {
 
     render() {
         return (
-           <div id="content" className="container align-items-center">
-
-                <div id = "word" className="d-flex justify-content-center"> 
-                    
-                    <Link to="/"><a><img src="assets/back_75px_END.png" id="return" height="100" width="100" alt="Botón"></img></a></Link>
-                    <section>
-                        <p><label > Word: </label></p> 
-                        <ul>
-                            { this.state.elementos.map(elementos => <li>{elementos.ing}</li>)}
-                        </ul>
-                    </section>
-                    
-                </div>
-
-                <table id="bingotable">
+            <div id="content" className="flex-lg-column">
+            <div className="container d-flex justify-content-center">
+                <table id="bingotable" >
                     <tr>
                         <td id="square0"><img id="imagenes" src={this.getImage(0)} /></td>
                         <td id="square1"><img id="imagenes" src={this.getImage(1)} /></td>
@@ -95,13 +83,28 @@ class Application extends Component {
                         <td id="square23"><img id="imagenes" src={this.getImage(23)} /></td>
                     </tr>
                 </table>
-                <div id="btnStart" className="container align-items-center">
-                   <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
-               </div>
-               
-           </div>
-           
-
+                <div id = "word" className="d-flex flex-column"> 
+                    <section>
+                        <p><label ><img id = "img_word" src="assets/word.png"  alt="volver al home"></img> </label></p> 
+                        <ul id="lista_elementos" className="">
+                            { this.state.elementos.map(elementos => <li>elemetentos{elementos.ing}</li>)}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        
+            <div className="d-flex align-items-center justify-content-center">
+                <div>
+                    <Link to="/"><a><img id = "boton_home" src="assets/back_75px_END.png"  alt="volver al home"></img></a></Link>
+                </div>
+                <div id="btnStart">
+                    <input type="submit" value="Start Game" className="btn btn-primary btn-block m-3" onClick={this.start}></input>
+                </div>
+                
+            </div> 
+            
+            
+        </div>
         )
     }
 }

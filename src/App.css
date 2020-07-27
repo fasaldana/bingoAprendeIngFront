@@ -60,7 +60,7 @@ p a {
 #bingotable {
   width: 45%;
 	height: 50%;
-  margin: 0 auto;
+  
   text-align: center;
   border-collapse: collapse;
   background:  rgb(255, 255, 255);/* fondo de la imagen*/
@@ -146,9 +146,26 @@ p a {
   } 
   /* ------------------------------------------------ */
   
+  
 }
 
-
+#boton_home{
+  
+  animation: desplazarIzquierda 1s infinite;
+}
+#boton_home:hover{
+  animation: saltarPieza 2s infinite;
+}
+#img_word{
+  animation: saltar2 2s infinite;
+  max-width: 80px;
+  width: auto;
+}
+#lista_elementos{
+  font-weight: bold;
+  color:rgba(149, 0, 255, 0.658);
+  font-size: 1em;
+}
 
 
 
