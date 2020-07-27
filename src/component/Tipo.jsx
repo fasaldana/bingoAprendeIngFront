@@ -55,7 +55,7 @@ class Tipo extends Component {
                             <div className="col" id="look">
                                 <img id = "logotipo" src="assets/tipo_center.png" />
                                 <Link to="/categorias">
-                                    <button id="botonesTipo" className="btn btn-warning stretched-link border border-danger" onClick = {this.onClick1}>CENTER</button>
+                                    <button id="botonesTipo" className="btn btn-warning stretched-link border border-danger" onClick = {this.onClick1}>ROW</button>
                                 </Link>
                             </div>
                             <div className="col-sm">
