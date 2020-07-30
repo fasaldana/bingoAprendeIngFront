@@ -24,10 +24,11 @@ p a {
   background: #5dc4de;
   text-align: center;
   font-weight: 600;
-  font-size: 15pt;
+  font-size: 30pt;
   width: 20%;
   height: 15%;
-  animation: saltarBingo 10s infinite;
+  
+  
   box-shadow: -5px 10px 50px rgb(149, 0, 255);
   background-color: rgba(149, 0, 255, 0.658);
 
@@ -36,9 +37,8 @@ p a {
   color: #563d7c;
   width: 100%;
   height: 15%;
-  animation:blur 1s ease-out infinite;
-  
-  
+  border: none;
+  background-color: rgba(149, 0, 255, 0);
   text-shadow:
 		0 0 5px rgba(0,178,255,1),
 		0 0 10px rgba(0,178,255,1),
@@ -51,14 +51,13 @@ p a {
     0 0 180px rgba(38,104,127,1);
   
 }
-
 #palabraBingo:hover{
   color: gold;
   animation:blur 1.5s ease-out infinite;
 }
 
 #bingotable {
-  width: 45%;
+  width: 70%;
 	height: 50%;
   
   text-align: center;
@@ -68,7 +67,7 @@ p a {
 #imagenes{
   
   width: 100%;
-  height: 15%;
+  height: 30%;
 }
 
 
@@ -76,11 +75,11 @@ p a {
   display: flex;
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 1000px){
   
   #imagenes{
-    width: 60px;
-    height: 30px;
+    width: 65px;
+    height: 40px;
   }
   h1, p {
     font-family: 'Roboto', sans-serif; font-size: 20pt;
@@ -98,9 +97,10 @@ p a {
     color: #563d7c;
     width: 100%;
     height: 15%;
-    font-size: 15px;
+    border: none;
+    font-size: 10px;
     font-weight: 900;
-    animation:blur .75s ease-out infinite;
+    
     text-shadow:
 		0 0 5px rgba(0,178,255,1),
 		0 0 10px rgba(0,178,255,1),

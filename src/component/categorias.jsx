@@ -80,7 +80,7 @@ class Categorias extends Component {
                             <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick4}> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VEHICLES</a>
+                                            <a className="btn btn-light stretched-link" onClick = {this.onClick4}> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VERBS</a>
                                     </div>
                                 </div>
                             </div>
