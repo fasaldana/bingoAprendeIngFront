@@ -15,6 +15,7 @@ class Categorias extends Component {
     onClick1(){
         var request = `http://localhost:8080/juego/save_cat/1`;
         axios.get(request)
+        .then(window.open("/game"))
         .catch(error => {
             console.log(error);
         });
@@ -23,6 +24,7 @@ class Categorias extends Component {
      onClick2(){
         var request = `http://localhost:8080/juego/save_cat/2`;
          axios.get(request)
+         .then(window.open("/game"))
          .catch(error => {
              console.log(error);
          });
@@ -31,6 +33,7 @@ class Categorias extends Component {
     onClick3(){
         var request = `http://localhost:8080/juego/save_cat/3`;
          axios.get(request)
+         .then(window.open("/game"))
          .catch(error => {
              console.log(error);
          });
@@ -38,6 +41,7 @@ class Categorias extends Component {
     onClick4(){
         var request = `http://localhost:8080/juego/save_cat/4`;
          axios.get(request)
+         .then(window.open("/game"))
          .catch(error => {
              console.log(error);
          });
@@ -45,6 +49,7 @@ class Categorias extends Component {
     onClick5(){
         var request = `http://localhost:8080/juego/save_cat/5`;
          axios.get(request)
+         .then(window.open("/game"))
          .catch(error => {
              console.log(error);
          });
@@ -67,9 +72,7 @@ class Categorias extends Component {
                             <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
-                                        <Link to="/game">
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick1}><img src="assets/numbers_96px.png" width='50px'height='50px'></img>NUMBERS</a>
-                                        </Link>
+                                            <a className="btn btn-light stretched-link" onClick = {this.onClick3}><img src="assets/numbers_96px.png" width='50px'height='50px'></img>NUMBERS</a>
                                     </div>
                                 </div>
                             </div>
@@ -77,9 +80,7 @@ class Categorias extends Component {
                             <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
-                                        <Link to="/game">
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick2}> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VEHICLES</a>
-                                        </Link>
+                                            <a className="btn btn-light stretched-link" onClick = {this.onClick4}> <img src="assets/valet_parking_96px.png" width='50px'height='50px'></img>VEHICLES</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,10 +91,7 @@ class Categorias extends Component {
                             <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light " id="borderRed">
-                                        <Link to="/game">
-
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick3}><img src="assets/elephant_200px.png" width='50px'height='50px'></img>ANIMALS</a>
-                                        </Link>
+                                        <a className="btn btn-light stretched-link" onClick = {this.onClick1}><img src="assets/elephant_200px.png" width='50px'height='50px'></img>ANIMALS</a>
                                     </div>
 
                                 </div>
@@ -103,9 +101,7 @@ class Categorias extends Component {
                                 <div className="col px-md-1 p-1">
                             
                                     <div className="p-3 border bg-light" id="borderRed">
-                                        <Link to="/game">
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick4}><img src="assets/business_96px.png" width='50px'height='50px'></img>BUSINESS</a>
-                                        </Link>
+                                            <a className="btn btn-light stretched-link" onClick = {this.onClick5}><img src="assets/business_96px.png" width='50px'height='50px'></img>JOBS</a>
                                     </div>
                                 </div>
                             </div>
@@ -115,9 +111,7 @@ class Categorias extends Component {
                             <div className="d-flex" id = "botonEleccion">
                                 <div className="col px-md-1 p-1">
                                     <div className="p-3 border bg-light" id="borderRed">
-                                        <Link to="/game">
-                                            <a className="btn btn-light stretched-link" onClick = {this.onClick5}><img src="assets/shirt_96px.png" width='50px'height='50px'></img>CLOTHES</a>
-                                        </Link>
+                                            <a className="btn btn-light stretched-link" onClick = {this.onClick2}><img src="assets/shirt_96px.png" width='50px'height='50px'></img>CLOTHES</a>
                                     </div>
 
                                 </div>

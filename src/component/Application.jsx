@@ -12,8 +12,10 @@ class Application extends Component {
             images: null,
             words: [],
             estadoElem :[],
-            imagesMarked: []
+            imagesMarked: [],
+            juego: null
         };
+        this.getGame();
         this.getList();
     }
 
@@ -22,6 +24,17 @@ class Application extends Component {
         axios.get(request).then(response => response.data)
         .then(data => {
             this.setState({elementos: data});
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+
+    getGame(){
+        var request = 'http://localhost:8080/juego/get_game';
+        axios.get(request).then(response => response.data)
+        .then(data => {
+            this.setState({juego: data});
         })
         .catch(error => {
             console.log(error);
@@ -44,8 +57,27 @@ class Application extends Component {
           }
 
     getImage (image) {
-        return {0:`categories/numbers/${this.state.elementos[image]}.jpg`,
+        var idCat = 0;
+        if(this.state.juego){
+            idCat = this.state.juego.idcategoria;
+        }
+        if(idCat==1){
+            return {0:`categories/animals/${this.state.elementos[image]}.jpg`,
+        1:`categories/animals/${this.state.elementos[image]}x.jpg`}
+        }else if(idCat == 2){
+            return {0:`categories/clothes/${this.state.elementos[image]}.jpg`,
+        1:`categories/clothes/${this.state.elementos[image]}x.jpg`}
+        }else if(idCat == 3){
+            return {0:`categories/numbers/${this.state.elementos[image]}.jpg`,
         1:`categories/numbers/${this.state.elementos[image]}x.jpg`}
+        }else if(idCat == 4){
+            return {0:`categories/vehicles/${this.state.elementos[image]}.jpg`,
+        1:`categories/vehicles/${this.state.elementos[image]}x.jpg`}
+        }else{
+            return {0:`categories/jobs/${this.state.elementos[image]}.jpg`,
+        1:`categories/jobs/${this.state.elementos[image]}x.jpg`}
+        }
+        
     } 
 
     start(){
@@ -117,7 +149,7 @@ class Application extends Component {
         .then(response => {
             const obj = response.data;
             if(obj == 1){
-                alert("eres un pendejo");
+                alert("GANADOR!!!")
             }
         })
         .catch(error => {
@@ -204,7 +236,7 @@ class Application extends Component {
                        <section>
                            <p><label ><img id = "img_word" src="assets/word.png"  alt="volver al home"></img> </label></p>
                            <ul id="lista_elementos" className="">
-                               { this.state.elementos.map(elementos => <li>elemetentos{elementos.ing}</li>)}
+                               { this.state.words.map(words => <li>{words.ing}</li>)}
                            </ul>
                        </section>
                    </div>
