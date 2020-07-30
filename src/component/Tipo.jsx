@@ -14,7 +14,7 @@ class Tipo extends Component {
      onClick1(){
         var request = `http://localhost:8080/juego/save_data/1`;
         axios.get(request)
-        .then(window.open("/categorias"))
+        .then(window.open("/categorias","_self"))
         .catch(error => {
             console.log(error);
         });
@@ -23,7 +23,7 @@ class Tipo extends Component {
      onClick2(){
         var request = `http://localhost:8080/juego/save_data/2`;
          axios.get(request)
-         .then(window.open("/categorias"))
+         .then(window.open("/categorias","_self"))
          .catch(error => {
              console.log(error);
          });
@@ -32,7 +32,7 @@ class Tipo extends Component {
     onClick3(){
         var request = `http://localhost:8080/juego/save_data/3`;
          axios.get(request)
-         .then(window.open("/categorias"))
+         .then(window.open("/categorias","_self"))
          .catch(error => {
              console.log(error);
          });

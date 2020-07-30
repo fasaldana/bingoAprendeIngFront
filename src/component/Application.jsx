@@ -13,7 +13,8 @@ class Application extends Component {
             words: [],
             estadoElem :[],
             imagesMarked: [],
-            juego: null
+            juego: null,
+            estado: 0
         };
         this.getGame();
         this.getList();
@@ -44,7 +45,12 @@ class Application extends Component {
     componentDidMount(){
         const interval = setInterval(() => {
             this.getData();
-        }, 5000);
+            this.checkBingoStatus();
+            if(this.state.estado == 1){
+                window.open("/lose","_self");
+            }
+        }, 2000);   
+
     }
 
     getData(){
@@ -98,7 +104,15 @@ class Application extends Component {
         });
     }
 
-    
+    checkBingoStatus(){
+        var request = `http://localhost:8080/elements/bingo_check`;
+        axios.get(request)
+        .then(response => response.data)
+            .then(data => {
+                this.setState({estado: data});
+            });
+          
+    }    
 
     getImagePos(id){
         const pos = this.state.elementos[id];
@@ -149,7 +163,7 @@ class Application extends Component {
         .then(response => {
             const obj = response.data;
             if(obj == 1){
-                alert("GANADOR!!!")
+                window.open("/win","_self")
             }
         })
         .catch(error => {

@@ -15,7 +15,7 @@ class Categorias extends Component {
     onClick1(){
         var request = `http://localhost:8080/juego/save_cat/1`;
         axios.get(request)
-        .then(window.open("/game"))
+        .then(window.open("/game","_self"))
         .catch(error => {
             console.log(error);
         });
@@ -24,7 +24,7 @@ class Categorias extends Component {
      onClick2(){
         var request = `http://localhost:8080/juego/save_cat/2`;
          axios.get(request)
-         .then(window.open("/game"))
+         .then(window.open("/game","_self"))
          .catch(error => {
              console.log(error);
          });
@@ -33,7 +33,7 @@ class Categorias extends Component {
     onClick3(){
         var request = `http://localhost:8080/juego/save_cat/3`;
          axios.get(request)
-         .then(window.open("/game"))
+         .then(window.open("/game","_self"))
          .catch(error => {
              console.log(error);
          });
@@ -41,7 +41,7 @@ class Categorias extends Component {
     onClick4(){
         var request = `http://localhost:8080/juego/save_cat/4`;
          axios.get(request)
-         .then(window.open("/game"))
+         .then(window.open("/game","_self"))
          .catch(error => {
              console.log(error);
          });
@@ -49,7 +49,7 @@ class Categorias extends Component {
     onClick5(){
         var request = `http://localhost:8080/juego/save_cat/5`;
          axios.get(request)
-         .then(window.open("/game"))
+         .then(window.open("/game","_self"))
          .catch(error => {
              console.log(error);
          });
