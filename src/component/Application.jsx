@@ -14,7 +14,8 @@ class Application extends Component {
             estadoElem :[],
             imagesMarked: [],
             juego: null,
-            estado: 0
+            estado: 0,
+            nmbrPlayers: 0
         };
         this.getGame();
         this.getList();
@@ -43,14 +44,19 @@ class Application extends Component {
     }
 
     componentDidMount(){
-        const interval = setInterval(() => {
+        this.interval = setInterval(() => {
             this.getData();
+            this.nmbrPlayers();
             this.checkBingoStatus();
             if(this.state.estado == 1){
                 window.open("/lose","_self");
             }
         }, 2000);   
 
+    }
+
+    componentWillUnmount () {
+        clearInterval(this.interval)
     }
 
     getData(){
@@ -77,7 +83,7 @@ class Application extends Component {
             return {0:`categories/numbers/${this.state.elementos[image]}.jpg`,
         1:`categories/numbers/${this.state.elementos[image]}x.jpg`}
         }else if(idCat == 4){
-            return {0:`categories/vehicles/${this.state.elementos[image]}.jpg`,
+            return {0:`categories/verbos/${this.state.elementos[image]}.jpg`,
         1:`categories/vehicles/${this.state.elementos[image]}x.jpg`}
         }else{
             return {0:`categories/jobs/${this.state.elementos[image]}.jpg`,
@@ -113,6 +119,15 @@ class Application extends Component {
             });
           
     }    
+
+    nmbrPlayers(){
+        var request = `http://localhost:8080/elements/nro_players`;
+        axios.get(request)
+        .then(response => response.data)
+            .then(data => {
+                this.setState({nmbrPlayers: data});
+            });
+    }
 
     getImagePos(id){
         const pos = this.state.elementos[id];
@@ -248,6 +263,7 @@ class Application extends Component {
                     </table>
                    <div id = "word" className="d-flex flex-column">
                        <section>
+                            <p>Total de jugadores: {this.state.nmbrPlayers}</p>
                            <p><label ><img id = "img_word" src="assets/word.png"  alt="volver al home"></img> </label></p>
                            <ul id="lista_elementos" className="">
                                { this.state.words.map(words => <li>{words.ing}</li>)}
